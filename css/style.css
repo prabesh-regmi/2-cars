@@ -1,0 +1,50 @@
+body{
+    margin:0;
+    background: darkgray;
+    overflow:hidden;
+    text-align:center;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#two-car{
+    background: #535766;
+    position:sticky;
+}
+#images{
+    visibility: hidden;
+}
+.score{
+    float:Right;
+    padding-right:10rem;
+}
+.score h3,.score h3 span{
+    font-size:2rem;
+    color:black;
+}
+.game-over{
+    position:fixed;
+    width: 100%;
+    height: 100vh;
+    top:0;
+    left:0;
+    background-color: rgb(0,0,0,0.8);
+    visibility:hidden;
+
+}
+.game-overr{
+    background: linear-gradient(260deg,#9b6c50 0%, #4f2626);
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    color:white;
+    display: flex;
+    width:30rem;
+    height: 23rem;
+    border-radius: 2rem;
+    flex-direction: column;
+
+  }

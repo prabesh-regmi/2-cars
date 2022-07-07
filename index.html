@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Car</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="score">
+        <h3>score: <span id="score"></span></h3>
+    </div>
+    
+    <section class="container">
+        
+        <div id="images">
+            <img src="img/car-blue.svg" id="bluecar">
+            <img src="img/car-red.svg" id="redcar">
+            <img src="img/score-blue.svg" id="score-blue" alt="">
+            <img src="img/score-red.svg" id="score-red" alt="">
+            <img src="img/square-blue.svg" id="square-blue" alt="">
+            <img src="img/square-red.svg" id="square-red" alt="">
+        </div>
+       
+
+        
+    <canvas id="two-car">
+    </canvas>
+    <div class="game-over">
+        <div class="game-overr">
+            <h2 style="font-size:3rem;">Game Over !!</h2>
+            <h3 style="font-size:2rem;">Score: <span class="game-score"></span></h3>
+            <p style="font-size:1rem;">Press Space to play again</p>
+            <p><img src="img/replay.png" height="30px" width="30px"></img></p>
+            
+        </div>
+    </div>
+    </section>
+    
+
+    
+    <script src="script/utils.js"></script>
+    <script src="script/road.js"></script>
+    <script src="script/controls.js"></script>
+    <script src="script/obstacles.js"></script>
+    <script src="script/car.js"></script>
+    <script src="script/script.js"></script>
+</body>
+</html>
