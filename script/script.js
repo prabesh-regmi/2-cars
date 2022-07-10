@@ -7,13 +7,12 @@ const scoreRed = document.getElementById("score-red");
 const squareBlue = document.getElementById("square-blue");
 const squareRed = document.getElementById("square-red");
 const scorePlace = document.getElementById("score");
-var gameover=document.querySelector('.game-over');
+const gameover=document.querySelector('.game-over');
 const car1 = new Image();
 car1.src = 'img/car-blue.svg';
 const car2 = new Image();
 car2.src = 'img/car-red.svg';
-obsImage = [scoreBlue, squareBlue, scoreRed, squareRed];
-
+const obsImage = [scoreBlue, squareBlue, scoreRed, squareRed];
 
 
 // redCar.style.display='none';
@@ -21,12 +20,9 @@ obsImage = [scoreBlue, squareBlue, scoreRed, squareRed];
 canvas.width = 400;
 const ctx = canvas.getContext("2d");
 const road = new Road(canvas.width / 2, canvas.width * 0.9);
-var score = 0;
-var cars = [new Car(road.getLaneCenter(1), 600, car1, 'left'),
-new Car(road.getLaneCenter(3), 600, car2, 'Right')
-];
-var obs = [];
-getObs(20);
+var score;
+var cars ;
+var obs ;
 
 
 
@@ -65,7 +61,7 @@ function gameEnd() {
 
 
 }
-window.addEventListener('load', StartGame)
+window.addEventListener('load', StartGame);
 
 
 

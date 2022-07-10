@@ -10,7 +10,6 @@ class Car{
         this.car=car;
         // this.controls=new Controls(position);
         this.carSpeed=Math.min(15,5+Math.floor(score/5));
-        this.readings=[];
         this.damaged=false;
         // this.polygon=[];
         
@@ -19,11 +18,10 @@ class Car{
 update(obs){
     // this.#move();
     this.y-=this.carSpeed;
-    this.carSpeed=Math.min(13,5+Math.floor(score/7));
+    this.carSpeed=Math.min(11,5+Math.floor(score/10));
     this.polygon=this.#createPolygon();
     this.damaged=this.#assessDamage(obs);
 
-    this.reaidngs=[];
     // for(let i=0;i<this.)
  
     
@@ -44,17 +42,15 @@ update(obs){
             }
 
         }
-            if (cars[0].y+140<obs[i].y-obs[i].height){
-                if(obs[i].type==="food"){
+                if(obs[i].type==="food" && this.y<obs[i].y-obs[i].height){
                     return true;
                 }
-                else{
+                else if (this.y+140<obs[i].y-obs[i].height){
                     obs.splice(i,1);
                     createObs(obs.length);
                 }
                 
     
-            }
 
     }
     return false;
@@ -81,7 +77,6 @@ update(obs){
     // console.log(points);
     return points;
 }
-
 
 
     draw(ctx){
